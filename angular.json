@@ -7,7 +7,7 @@
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
-          "standalone": false
+          "style": "scss"
         },
         "@schematics/angular:directive": {
           "standalone": false
@@ -30,6 +30,7 @@
               "zone.js"
             ],
             "tsConfig": "tsconfig.app.json",
+            "inlineStyleLanguage": "scss",
             "assets": [
               {
                 "glob": "**/*",
@@ -107,5 +108,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "d4a7b387-6a8d-4654-87fa-ff4ced0cbab5"
   }
 }
