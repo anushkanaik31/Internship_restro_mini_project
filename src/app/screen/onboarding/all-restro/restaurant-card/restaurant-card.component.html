@@ -1,0 +1,23 @@
+<div class="max-w-lg rounded overflow-hidden shadow-lg hover:shadow-2xl hover:bg-yellow-600 hover:scale-105 transition-transform duration-300 ease-in-out p-6 m-4 bg-yellow-500 text-black restaurant-card">
+  <div class="font-bold text-black text-xl mb-2">{{ restaurant.name || "myRestoName" }}</div>
+  <p class="text-black">
+    Owner: <span class="font-semibold">{{ restaurant.ownerName || "myResto owner" }}</span>
+  </p>
+  <p class="text-black">
+    Type: <span class="font-semibold">{{ restaurant.restroType || "Bistro" }}</span>
+  </p>
+  <p class="text-black">
+    Phone: <span class="font-semibold">{{ restaurant.contact || "9373599642" }}</span>
+  </p>
+  <p class="text-black">
+    Email: <span class="font-semibold">{{ restaurant.email || 'abc@gmail.com' }}</span>
+  </p>
+  <div class="mt-4 text-black">
+    <div class="font-semibold">Address:</div>
+    <div>
+      <span class="font-semibold">{{ restaurant.addressDetails.streetName || "Nandanvan Main road" }}</span>, 
+      <span class="font-semibold">{{ restaurant.addressDetails.city || 'Nagpur' }}</span>, 
+      <span class="font-semibold">{{ restaurant.addressDetails.zipCode || '440024' }}</span>
+    </div>
+  </div>
+</div>
