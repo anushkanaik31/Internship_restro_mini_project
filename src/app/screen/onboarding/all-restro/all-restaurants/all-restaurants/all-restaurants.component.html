@@ -1,0 +1,22 @@
+<div class="min-h-screen bg-gradient-to-r from-gray-800 via-gray-900 to-black p-6">
+    <div class="flex justify-center mb-8">
+        <button (click)="getAllRestro()" class="px-6 py-2 bg-yellow-500 text-gray-900 font-semibold rounded-lg shadow-md hover:bg-yellow-600 focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:ring-opacity-75 transition duration-300">
+            Get All Restaurants
+        </button>
+    </div>
+    
+    <div class="all-restaurants p-6 bg-gray-800 text-gray-300 rounded-lg shadow-lg">
+        <h1 class="text-4xl font-bold text-center mb-6 text-yellow-400">All Restaurants</h1>
+        <div *ngFor="let restaurant of allRestaurants" class="restaurant-card bg-gray-700 shadow-md rounded-lg p-6 mb-6">
+            <h2 class="text-2xl font-semibold text-yellow-300 mb-2">{{ restaurant.name }}</h2>
+            <div class="text-gray-400 space-y-1">
+                <p><strong>Owner:</strong> {{ restaurant.ownerName }}</p>
+                <p><strong>Type:</strong> {{ restaurant.restroType }}</p>
+                <p><strong>Contact:</strong> {{ restaurant.contact }}</p>
+                <p><strong>Email:</strong> <a [href]="'mailto:' + restaurant.email" class="text-blue-400 hover:underline">{{ restaurant.email }}</a></p>
+                <p><strong>Address:</strong> {{ restaurant.addressDetails.streetName }}, {{ restaurant.addressDetails.city }} - {{ restaurant.addressDetails.zipCode }}</p>
+            </div>
+        </div>
+    </div>
+  </div>
+  
