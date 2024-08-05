@@ -20,5 +20,9 @@ export class RestaurantCardComponent {
     restroType: 'string',
     contact: 'string',
     email: 'string' 
+    };
+    deleteRestaurant(id: number): void {
+      // Implement delete functionality if needed
     }
-}
+  }
+

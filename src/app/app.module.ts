@@ -10,20 +10,20 @@ import { HomeComponent } from './Components/home/home.component';
 import { OnboardingModule } from 'src/app/screen/onboarding/onboarding.module';
 import {HttpClientModule} from '@angular/common/http';
 import { FooterComponent } from './Components/footer/footer.component';
-import { RestaurantAddedPopupComponent } from 'src/app/screen/onboarding/restaurant-added-popup/restaurant-added-popup.component';
-
+import { AllRestroModule } from 'src/app/screen/onboarding/all-restro/all-restro.module';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     HomeComponent,
-    FooterComponent,
+    FooterComponent
   ],
 
   imports: [
     BrowserModule,
     AppRoutingModule,
+    AllRestroModule,
     HttpClientModule
   ],
   providers: [],

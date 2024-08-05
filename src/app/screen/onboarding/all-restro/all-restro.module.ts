@@ -12,6 +12,10 @@ import { RestaurantCardComponent } from './restaurant-card/restaurant-card.compo
   ],
   imports: [
     CommonModule
+  ],
+  exports: [
+    AllRestaurantsComponent,
+    RestaurantCardComponent
   ]
 })
 export class AllRestroModule { }
