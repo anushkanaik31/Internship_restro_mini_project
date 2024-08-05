@@ -1,2 +1,1 @@
-# Internship_restro_mini_project
-Mini project for a restaurant website 
+This is Internship Mini Project having restaurant details.
