@@ -1,0 +1,70 @@
+/* Import Tailwind's base, components, and utilities */
+@tailwind base;
+@tailwind utilities;
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: #f9fafb; 
+  color: #333; 
+}
+
+app-root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #ffffff; 
+  padding: 1rem;
+}
+
+header {
+  background-color: #b9d9eb; 
+  padding: 1rem 2rem;
+  border-bottom: 2px solid #a0c3e0; 
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+}
+
+footer {
+  background-color: #b9d9eb; 
+  padding: 1rem 2rem;
+  border-top: 2px solid #a0c3e0; 
+  box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1); 
+}
+
+button {
+  background-color: #a0c3e0; 
+  color: #ffffff; 
+  padding: 0.75rem 1.5rem; 
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease; 
+}
+
+button:hover {
+  background-color: #8ab0c3; 
+  transform: scale(1.05); 
+}
+
+.card {
+  background-color: #ffffff; 
+  border: 1px solid #e0e4e8; 
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+  padding: 1.25rem; 
+  margin-bottom: 1.5rem; 
+}
+
+.card-header {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.card-body {
+  font-size: 1rem;
+  color: #5a5a5a; 
+  line-height: 1.5; 
+}
