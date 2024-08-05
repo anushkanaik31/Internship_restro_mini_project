@@ -9,14 +9,17 @@ import { RestaurantDetails } from 'src/app/models/RestaurantDetails'
 })
 
 export class BackendService {
+  private baseUrl = 'https://c2d9-2401-4900-1c43-3a8b-54c4-72bd-bbc4-6946.ngrok-free.app';
+
   constructor(private http: HttpClient) {}
 
   onboardRestaurant(restaurantAddRequest: RestaurantAddRequest): Observable<Object> {
-    return this.http.post(
-      'https://1ca7-2401-4900-1c44-8479-5099-aa35-5647-41a7.ngrok-free.app/restro/createRestro',
-      restaurantAddRequest
-    )
-  }
+    console.log(restaurantAddRequest);
+    return this.http.post( `${this.baseUrl}/restro/addNew`,
+      restaurantAddRequest, {
+      responseType: 'json'
+      });
+}
 
   RestaurantDetails: any
 
