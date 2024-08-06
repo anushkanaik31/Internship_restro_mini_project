@@ -3,16 +3,18 @@ import { CommonModule } from '@angular/common';
 import { ReactiveFormsModule } from '@angular/forms';
 import { DetailsFormComponent } from './details-form/details-form.component';
 import { RestaurantAddedPopupComponent } from './restaurant-added-popup/restaurant-added-popup.component';
-import { RestaurantCardComponent } from 'src/app/screen/onboarding/all-restro/restaurant-card/restaurant-card.component';
+import { AllRestroModule } from './all-restro/all-restro.module';
 
 @NgModule({
   declarations: [
     DetailsFormComponent,
-    RestaurantAddedPopupComponent
+    RestaurantAddedPopupComponent,
+    
   ],
   imports: [
     CommonModule,
     ReactiveFormsModule,
+    AllRestroModule
   ],
   exports:[
     DetailsFormComponent

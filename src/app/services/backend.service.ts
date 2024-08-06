@@ -13,36 +13,18 @@ export class BackendService {
 
   constructor(private http: HttpClient) {}
 
-  onboardRestaurant(restaurantAddRequest: RestaurantAddRequest): Observable<Object> {
+  onboardRestaurant(restaurantAddRequest: RestaurantAddRequest): Observable <any> {
     console.log(restaurantAddRequest);
-    return this.http.post( `${this.baseUrl}/restro/addNew`,
-      restaurantAddRequest, {
-      responseType: 'json'
-      });
-}
-
-  RestaurantDetails: any
-
-  getRestroDetails() {
-    this.http.get(
-      'https://1ca7-2401-4900-1c44-8479-5099-aa35-5647-41a7.ngrok-free.app/restro/getRestroDetails',
-      {
-        responseType: 'json',
-        headers: new HttpHeaders({
-          'ngrok-skip-browser-warning': 'true',
-        }),
-      }
-    )
-    .subscribe({ 
-      next: (response ) => {
-        this.RestaurantDetails = response
-        console.log(response)
-      },
-      error: (err) => {
-        console.log(err);
-      },
+    return this.http.post(`${this.baseUrl}/restro/createRestro`, restaurantAddRequest, {
+      responseType: 'json',
     });
-    
-    return this.RestaurantDetails
   }
-}
+
+  getRestroDetails(): Observable<RestaurantDetails[]> {
+    return this.http.get<RestaurantDetails[]> (`${this.baseUrl}/restro/getRestroDetails`, {
+      headers: new HttpHeaders({
+          'ngrok-skip-browser-warning': 'true',
+        })
+      });
+    }
+  }

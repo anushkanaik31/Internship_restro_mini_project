@@ -34,10 +34,12 @@ export class DetailsFormComponent {
   }
 
   handleSubmit() {
+    if (this.restaurantDetails.valid) {
     if (confirm("Restaurant details about to submit")) {
       console.log('Restaurant details submitted successfully');
       this.createRequest(this.restaurantDetails);
       this.restaurantDetails.reset();
+    }
     }
   }
 
@@ -58,8 +60,11 @@ export class DetailsFormComponent {
       next: (response) => {
         this.isPopupVisible = true;
         this.cd.detectChanges();
+      },
+      error: (err) => {
+        console.error('Error occurred:', err);
       }
-    })
+    });
   }
 
   handleClose(val: boolean): void {

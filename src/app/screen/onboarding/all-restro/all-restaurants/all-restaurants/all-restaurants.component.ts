@@ -7,14 +7,25 @@ import { RestaurantDetails } from 'src/app/models/RestaurantDetails';
   templateUrl: './all-restaurants.component.html',
   styleUrls: ['./all-restaurants.component.scss']
 })
-export class AllRestaurantsComponent  {
-  allRestaurants : any = [];
-  constructor(private backendService: BackendService){
+export class AllRestaurantsComponent implements OnInit  {
+  restaurants : RestaurantDetails[] = [];
+
+  constructor(private backendService: BackendService) {}
+
+  ngOnInit(): void {
     this.getAllRestro();
   }
 
-  restaurants : RestaurantDetails[] = []
   getAllRestro(): void{
-    this.allRestaurants = this.backendService.getRestroDetails()
+    this.backendService.getRestroDetails().subscribe({
+      next: (response: RestaurantDetails[]) => {
+        console.log('API Response:', response);
+        this.restaurants = response;
+        console.log('Restaurants array:',this.restaurants);
+      },
+      error: (err: any) => {
+        console.error('API Error:', err);
+      }
+      });
+    }
   }
-}

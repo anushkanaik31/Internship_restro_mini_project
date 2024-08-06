@@ -1,6 +1,7 @@
 import { Component, Input } from '@angular/core';
 import { RestaurantDetails } from 'src/app/models/RestaurantDetails';
 
+
 @Component({
   selector: 'app-restaurant-card',
   templateUrl: './restaurant-card.component.html',
@@ -8,17 +9,17 @@ import { RestaurantDetails } from 'src/app/models/RestaurantDetails';
 })
 export class RestaurantCardComponent {
   @Input() restaurant: RestaurantDetails ={
-    id : 1,
+    id : 0,
     name: '',
-    ownerName: 'string',
+    ownerName: ' ',
     addressDetails: {
-      id: 1,
-    streetName: 'string',
-    city: 'string',
-    zipCode: 1
+      id: 0,
+      streetName: ' ',
+      city: ' ',
+      zipCode: 0
     },
-    restroType: 'string',
-    contact: 'string',
-    email: 'string' 
-    }
-}
+    restroType: ' ',
+    contact: ' ',
+    email: ' ' 
+    };
+  }
