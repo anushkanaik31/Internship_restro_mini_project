@@ -1,0 +1,22 @@
+<div class="min-h-screen bg-gradient-to-r from-gray-800 via-gray-900 to-black p-6">
+    <div class="flex justify-center mb-8">
+      <button 
+        (click)="getAllRestro()" 
+        class="px-6 py-2 bg-yellow-500 text-gray-900 font-semibold rounded-lg shadow-md hover:bg-yellow-600 focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:ring-opacity-75 transition duration-300">
+        Get All Restaurants
+      </button>
+    </div>
+  
+    <div class="text-white">
+      <div class="mx-auto p-4">
+        <p class="text-2xl font-extrabold text-yellow-600">All Restaurants</p>
+        <div class="flex flex-wrap">
+          <app-restaurant-card 
+            *ngFor="let restaurant of restaurants" 
+            [restaurant]="restaurant" 
+            class="w-full sm:w-1/2 md:w-1/3">
+          </app-restaurant-card>
+        </div>
+      </div>
+    </div>
+  </div>
