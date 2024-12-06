@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { ReactiveFormsModule } from '@angular/forms';
 import { DetailsFormComponent } from './details-form/details-form.component';
 import { RestaurantAddedPopupComponent } from './restaurant-added-popup/restaurant-added-popup.component';
-import { AllRestroModule } from './all-restro/all-restro.module';
+import { AllRestroModule } from 'src/app/screen/onboarding/all-restro/all-restaurants/all-restaurants/all-restaurants';
 
 @NgModule({
   declarations: [
