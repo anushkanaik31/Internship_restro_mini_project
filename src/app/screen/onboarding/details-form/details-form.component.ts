@@ -7,7 +7,7 @@ import { BackendService } from 'src/app/services/backend.service';
 @Component({
   selector: 'app-details-form',
   templateUrl: './details-form.component.html',
-  styleUrls: ['./details-form.component.scss'],
+  styleUrls: [],
 })
 export class DetailsFormComponent {
   restaurantAddRequest: RestaurantAddRequest = new RestaurantAddRequest();
