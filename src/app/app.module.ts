@@ -12,11 +12,12 @@ import { HeaderComponent } from './Components/header/header.component';
     HeaderComponent,   
     FooterComponent,
   ],
-
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+  ],
+  exports:[
   ],
   providers: [],
   bootstrap: [AppComponent]

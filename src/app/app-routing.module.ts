@@ -8,7 +8,13 @@ const routes: Routes = [
     pathMatch: 'full'
   },
   {
+    path: '',
+    redirectTo: '/home',
+    pathMatch: 'full'
+  },
+  {
     path: 'onboarding/details-form',
+    loadChildren: ()=> import('./screen/onboarding/onboarding.module').then((module)=>module.OnboardingModule)
     loadChildren: ()=> import('./screen/onboarding/onboarding.module').then((module)=>module.OnboardingModule)
   },
   {
@@ -18,11 +24,13 @@ const routes: Routes = [
   {
     path: 'all-restaurants',
     loadChildren: ()=>import('./screen/all-restros/all-restros.module').then((module)=>module.AllRestrosModule)
+    loadChildren: ()=>import('./screen/all-restros/all-restros.module').then((module)=>module.AllRestrosModule)
   },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
+  exports: [RouterModule],
   exports: [RouterModule],
 })
 export class AppRoutingModule { }

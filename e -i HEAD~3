@@ -1,0 +1,261 @@
+[33mcommit 1d069dfe8ebc6cf2ff4c180518a01315acbf7d09[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mfeature[m[33m, [m[1;31morigin/feature[m[33m)[m
+Merge: d4d4ac74 f09dcccb
+Author: anushka <naikanushka910@gmail.com>
+Date:   Mon Aug 12 03:11:07 2024 +0530
+
+    Resolved merge conflicts by keeping necessary files
+
+[33mcommit d4d4ac746e194b711fd5652b8be47a142be60426[m
+Author: anushka <naikanushka910@gmail.com>
+Date:   Tue Aug 6 10:20:39 2024 +0530
+
+    Added cards and footer component
+
+[33mcommit a1dc21eda2f9657d9ddfdc13fd8dab4149fa638d[m
+Author: anushka <naikanushka910@gmail.com>
+Date:   Tue Aug 6 09:53:59 2024 +0530
+
+    Added Cards and footer elements
+
+[33mcommit 947d42defb14308a09c9bca94302cb795272600b[m
+Author: anushka <naikanushka910@gmail.com>
+Date:   Tue Aug 6 01:21:33 2024 +0530
+
+    committed the working code
+
+[33mcommit f09dcccb495813e1fb34017f3ff9e924e6652bbc[m
+Author: anushkanaik31 <141602577+anushkanaik31@users.noreply.github.com>
+Date:   Mon Aug 5 17:22:22 2024 +0530
+
+    Delete src directory
+
+[33mcommit 78351270a564343d1b3643d118de5bedefc111d2[m
+Author: anushkanaik31 <141602577+anushkanaik31@users.noreply.github.com>
+Date:   Mon Aug 5 17:22:12 2024 +0530
+
+    Delete package.json
+
+[33mcommit f8fc5c851d818a90e64f207778fbb2633b2fce59[m
+Author: anushkanaik31 <141602577+anushkanaik31@users.noreply.github.com>
+Date:   Mon Aug 5 17:21:59 2024 +0530
+
+    Delete package-lock.json
+
+[33mcommit 7f93cd5b123685928917ffb89f94ebb59238d35a[m
+Author: anushkanaik31 <141602577+anushkanaik31@users.noreply.github.com>
+Date:   Mon Aug 5 17:21:46 2024 +0530
+
+    Delete angular.json
+
+[33mcommit 88d83f840e2c09a0bb699f35e547a98a2b777456[m
+Author: anushkanaik31 <141602577+anushkanaik31@users.noreply.github.com>
+Date:   Mon Aug 5 17:21:31 2024 +0530
+
+    Delete .gitignore
+
+[33mcommit 607fe6a5c119be52358e6b622d1b46c5ee34c6d8[m
+Author: anushkanaik31 <141602577+anushkanaik31@users.noreply.github.com>
+Date:   Mon Aug 5 17:19:18 2024 +0530
+
+    Delete server.ts
+
+[33mcommit 4f339a3a884a8ec754dfeae711e1cd7b96e9c2da[m
+Author: anushkanaik31 <141602577+anushkanaik31@users.noreply.github.com>
+Date:   Mon Aug 5 17:19:09 2024 +0530
+
+    Delete tailwind.config.js
+
+[33mcommit 136a37438eab04cbd8150aa7b158f23bb43d1935[m
+Author: anushkanaik31 <141602577+anushkanaik31@users.noreply.github.com>
+Date:   Mon Aug 5 17:18:58 2024 +0530
+
+    Delete tsconfig.app.json
+
+[33mcommit b6d4f93af0d6e60433f242be64789cdf96c49d29[m
+Author: anushkanaik31 <141602577+anushkanaik31@users.noreply.github.com>
+Date:   Mon Aug 5 17:18:45 2024 +0530
+
+    Delete tsconfig.json
+
+[33mcommit 8dc85b4142af814522c7f33cd5e8e1043056a154[m
+Merge: 428e5150 2ef123ae
+Author: anushkanaik31 <141602577+anushkanaik31@users.noreply.github.com>
+Date:   Mon Aug 5 17:04:25 2024 +0530
+
+    Merge pull request #4 from anushkanaik31/feature
+    
+    Feature
+
+[33mcommit 2ef123ae6316c52d69808d872f3fa70877782f65[m
+Merge: 1e062b6e 428e5150
+Author: anushka <naikanushka910@gmail.com>
+Date:   Mon Aug 5 17:00:28 2024 +0530
+
+    Merge main into feature
+
+[33mcommit 1e062b6e8b320b691141eb11612fb3b49618dc36[m
+Author: anushka <naikanushka910@gmail.com>
+Date:   Mon Aug 5 16:58:24 2024 +0530
+
+    Merge develop into feature
+
+[33mcommit 714c85f0a1509f446296e1899c40fdce8b34edf1[m
+Merge: 027f5d86 d0f12223
+Author: anushka <naikanushka910@gmail.com>
+Date:   Thu Aug 1 21:11:22 2024 +0530
+
+    Merge branch 'feature' of https://github.com/anushkanaik31/Internship_restro_mini_project into feature
+
+[33mcommit 027f5d86c385249f3cf151066c0b5ae1afb42b69[m
+Author: anushka <naikanushka910@gmail.com>
+Date:   Thu Aug 1 21:05:10 2024 +0530
+
+    Your commit message
+
+[33mcommit d0f12223288487135d4d227095e0a21eddc6c839[m
+Author: anushkanaik31 <141602577+anushkanaik31@users.noreply.github.com>
+Date:   Wed Jul 31 09:34:47 2024 +0530
+
+    Delete .editorconfig
+
+[33mcommit 428e51501cc480b723ecaa7d73ffd913762776c5[m
+Author: anushkanaik31 <141602577+anushkanaik31@users.noreply.github.com>
+Date:   Wed Jul 31 09:33:31 2024 +0530
+
+    Create README.md
+
+[33mcommit 567a438204a921943a2f66d5b2d0ef2ba4f19a28[m
+Author: anushkanaik31 <141602577+anushkanaik31@users.noreply.github.com>
+Date:   Wed Jul 31 09:32:33 2024 +0530
+
+    Delete tsconfig.json
+
+[33mcommit 0ef1b5fe85b8faf114488201e5d08ca1934f445e[m
+Author: anushkanaik31 <141602577+anushkanaik31@users.noreply.github.com>
+Date:   Wed Jul 31 09:32:23 2024 +0530
+
+    Delete tsconfig.app.json
+
+[33mcommit df4bb9c98b3dd07beb5bd2dfb9c29b54063d7b86[m
+Author: anushkanaik31 <141602577+anushkanaik31@users.noreply.github.com>
+Date:   Wed Jul 31 09:31:57 2024 +0530
+
+    Delete server.ts
+
+[33mcommit 851c8654a01446d4081ddf714577e02a57f7ce92[m
+Author: anushkanaik31 <141602577+anushkanaik31@users.noreply.github.com>
+Date:   Wed Jul 31 09:31:47 2024 +0530
+
+    Delete package.json
+
+[33mcommit bcdf1e6274d819c7ba8eeb95d8c69eb3c35d29a6[m
+Author: anushkanaik31 <141602577+anushkanaik31@users.noreply.github.com>
+Date:   Wed Jul 31 09:31:33 2024 +0530
+
+    Delete angular.json
+
+[33mcommit cdf6a1c1c50d3dc35f380f316fb8e834cb2fcde7[m
+Author: anushkanaik31 <141602577+anushkanaik31@users.noreply.github.com>
+Date:   Wed Jul 31 09:31:23 2024 +0530
+
+    Delete README.md
+
+[33mcommit 0e6453b94e3466af84b9c921bcbef634158249b8[m
+Author: anushkanaik31 <141602577+anushkanaik31@users.noreply.github.com>
+Date:   Wed Jul 31 09:31:13 2024 +0530
+
+    Delete .gitignore
+
+[33mcommit 8b1008771d4e4932f1805c2e0d6c9d0ac7615557[m
+Author: anushkanaik31 <141602577+anushkanaik31@users.noreply.github.com>
+Date:   Wed Jul 31 09:31:03 2024 +0530
+
+    Delete .editorconfig
+
+[33mcommit f0a23085f5b8e1c9bf17501169f5b90eb2f86435[m
+Merge: b6a4a9b2 965b7a2b
+Author: anushkanaik31 <141602577+anushkanaik31@users.noreply.github.com>
+Date:   Wed Jul 31 09:30:40 2024 +0530
+
+    Merge pull request #3 from anushkanaik31/feature
+    
+    Delete package-lock.json
+
+[33mcommit 965b7a2b1b176504a2b80c50180a0cb3bafcbf92[m
+Author: anushkanaik31 <141602577+anushkanaik31@users.noreply.github.com>
+Date:   Wed Jul 31 09:30:03 2024 +0530
+
+    Delete package-lock.json
+
+[33mcommit b6a4a9b2b572e9343ca3505f9891997fa2a69456[m
+Author: anushkanaik31 <141602577+anushkanaik31@users.noreply.github.com>
+Date:   Wed Jul 31 09:29:08 2024 +0530
+
+    Deleted files from main branch
+
+[33mcommit 5d330441d04bf7b19ead9a0bdc1e10fa6b55ff00[m
+Merge: 8d2706ef 07cea75a
+Author: anushkanaik31 <141602577+anushkanaik31@users.noreply.github.com>
+Date:   Mon Jul 29 09:46:50 2024 +0530
+
+    Merge pull request #2 from anushkanaik31/feature
+    
+    Delete .vscode directory
+
+[33mcommit 07cea75aca0db7c3ba11bda5904e562255b14785[m
+Author: anushkanaik31 <141602577+anushkanaik31@users.noreply.github.com>
+Date:   Mon Jul 29 09:45:43 2024 +0530
+
+    Delete .vscode directory
+
+[33mcommit 8d2706efa30fd040c5ba7e758bdb0e5c07e3617f[m
+Author: anushkanaik31 <141602577+anushkanaik31@users.noreply.github.com>
+Date:   Mon Jul 29 09:35:00 2024 +0530
+
+    Delete src directory
+
+[33mcommit c5bad2b99be2abd10ac2cad80689a41ebb8c18ba[m
+Author: anushkanaik31 <141602577+anushkanaik31@users.noreply.github.com>
+Date:   Mon Jul 29 09:34:48 2024 +0530
+
+    Delete public directory
+
+[33mcommit ec4b0289942836c4bb13c5150691fc2a632d9442[m
+Author: anushkanaik31 <141602577+anushkanaik31@users.noreply.github.com>
+Date:   Mon Jul 29 09:33:41 2024 +0530
+
+    Delete .vscode directory
+
+[33mcommit 4bdfe1c0bc38240fd226922b6613d2dc0ccc55fd[m
+Merge: 12852899 8b84aa61
+Author: anushkanaik31 <141602577+anushkanaik31@users.noreply.github.com>
+Date:   Thu Jul 25 01:04:56 2024 +0530
+
+    Merge pull request #1 from anushkanaik31/feature
+    
+    Feature
+
+[33mcommit 8b84aa61c84ef4d534698addc2fc1584bbab16d7[m
+Merge: afacf00f 12852899
+Author: anushka <naikanushka910@gmail.com>
+Date:   Thu Jul 25 00:57:23 2024 +0530
+
+    Merge branch 'feature' of https://github.com/anushkanaik31/Internship_restro_mini_project into feature
+
+[33mcommit afacf00f473cd7050abb75b993c9540a09ab599d[m
+Author: anushka <naikanushka910@gmail.com>
+Date:   Thu Jul 25 00:49:31 2024 +0530
+
+    initial commit
+
+[33mcommit 449eb9e0c2ca61d4f16b8f8cb4fde821b02cf30e[m
+Author: anushka <naikanushka910@gmail.com>
+Date:   Wed Jul 24 23:56:51 2024 +0530
+
+    initial commit
+
+[33mcommit 12852899fe7a8b7641687b12de51e55072b35028[m
+Author: anushkanaik31 <141602577+anushkanaik31@users.noreply.github.com>
+Date:   Mon Jul 22 09:23:58 2024 +0530
+
+    Initial commit
