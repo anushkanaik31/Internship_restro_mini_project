@@ -1,30 +1,47 @@
-import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { Injectable } from '@angular/core';
+import { RestaurantAddRequest } from '../models/RestaurantAddRequest';
 import { Observable } from 'rxjs';
-import { RestaurantAddRequest } from 'src/app/models/RestaurantAddRequest';
-import { RestaurantDetails } from 'src/app/models/RestaurantDetails'
+import { RestaurantDetails } from '../models/RestaurantDetails';
 
 @Injectable({
   providedIn: 'root',
 })
 
 export class BackendService {
-  private baseUrl = 'https://c2d9-2401-4900-1c43-3a8b-54c4-72bd-bbc4-6946.ngrok-free.app';
-
   constructor(private http: HttpClient) {}
 
-  onboardRestaurant(restaurantAddRequest: RestaurantAddRequest): Observable <any> {
-    console.log(restaurantAddRequest);
-    return this.http.post(`${this.baseUrl}/restro/createRestro`, restaurantAddRequest, {
-      responseType: 'json',
-    });
+  onboardRestaurant(restaurantAddRequest: RestaurantAddRequest): Observable<Object> {
+    return this.http
+      .post(
+        'https://1ca7-2401-4900-1c44-8479-5099-aa35-5647-41a7.ngrok-free.app/restro/createRestro',
+        restaurantAddRequest
+      )
   }
 
-  getRestroDetails(): Observable<RestaurantDetails[]> {
-    return this.http.get<RestaurantDetails[]> (`${this.baseUrl}/restro/getRestroDetails`, {
-      headers: new HttpHeaders({
-          'ngrok-skip-browser-warning': 'true',
-        })
+  getRestroDetails() {
+    let allRestuantData:RestaurantDetails[] = []
+    this.http
+      .get<RestaurantDetails[]>(
+        'https://1ca7-2401-4900-1c44-8479-5099-aa35-5647-41a7.ngrok-free.app/restro/getRestroDetails',
+        {
+          responseType: 'json',
+          headers: new HttpHeaders({
+            'ngrok-skip-browser-warning': 'true',
+          }),
+        }
+      ) 
+      .subscribe({ 
+        next: (response ) => {
+          allRestuantData = response
+          console.log(response)
+        },
+        error: (err) => {
+          console.log(err);
+          alert(err.message + " Team is working on It, please try after some time");
+        },
       });
-    }
+      return allRestuantData
   }
+  deleteRestaurant() {}
+}

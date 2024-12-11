@@ -1,39 +1,24 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ReactiveFormsModule } from '@angular/forms';
 import { DetailsFormComponent } from './details-form/details-form.component';
+import { ReactiveFormsModule } from '@angular/forms';
 import { RestaurantAddedPopupComponent } from './restaurant-added-popup/restaurant-added-popup.component';
-import { AllRestroModule } from './all-restro/all-restro.module';
+import { OnboardingRoutingModule } from './onboarding-routing.module';
+import { AllRestrosModule } from '../all-restros/all-restros.module';  
 
 @NgModule({
   declarations: [
     DetailsFormComponent,
     RestaurantAddedPopupComponent,
-    
   ],
   imports: [
     CommonModule,
     ReactiveFormsModule,
-    AllRestroModule
+    OnboardingRoutingModule,
+    AllRestrosModule  
   ],
-  exports:[
-    DetailsFormComponent
+  exports: [
+    DetailsFormComponent, 
   ]
 })
 export class OnboardingModule { }
-
-export interface RestaurantAddressDetails {
-  id: number;
-  streetName: string;
-  city: string;
-  zipCode: number;
-}
-export interface RestaurantDetails {
-  id: number;
-  name: string;
-  ownerName: string;
-  addressDetails: RestaurantAddressDetails;
-  restroType: string;
-  contact: string;
-  email: string;
-}

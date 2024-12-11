@@ -4,17 +4,13 @@ import { RestaurantAddRequest } from 'src/app/models/RestaurantAddRequest';
 @Component({
   selector: 'app-restaurant-added-popup',
   templateUrl: './restaurant-added-popup.component.html',
-  styleUrls: ['./restaurant-added-popup.component.scss']
+  styleUrls: ['./restaurant-added-popup.component.scss'],
 })
 export class RestaurantAddedPopupComponent {
-  constructor(
-  ) {}
-  @Input() restaurantDetails: RestaurantAddRequest = new RestaurantAddRequest();
+  
+  constructor() {}
+  @Input() restaurantDetails : RestaurantAddRequest = new RestaurantAddRequest()
   @Output() closePopupEvent = new EventEmitter<boolean>();
-
-  handleClose() {
-    this.closePopupEvent.emit(true);
-  }
 
   handleAccept() {
     this.closePopupEvent.emit(true);

@@ -8,6 +8,3 @@ export class RestaurantAddRequest{
     contact: number = 0
     email: string = ''
 }
-
-
-  

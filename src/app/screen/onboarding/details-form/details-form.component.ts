@@ -1,9 +1,8 @@
 import { Component } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { FormBuilder, FormGroup, RequiredValidator, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { RestaurantAddRequest } from 'src/app/models/RestaurantAddRequest';
 import { BackendService } from 'src/app/services/backend.service';
-import { ChangeDetectorRef } from '@angular/core';
 
 @Component({
   selector: 'app-details-form',
@@ -13,33 +12,27 @@ import { ChangeDetectorRef } from '@angular/core';
 export class DetailsFormComponent {
   restaurantAddRequest: RestaurantAddRequest = new RestaurantAddRequest();
   restaurantDetails: FormGroup;
-  isPopupVisible = false;
 
   constructor(
     private fb: FormBuilder,
     private backend: BackendService,
-    private router: Router,
-    private cd: ChangeDetectorRef
   ) {
     this.restaurantDetails = this.fb.group({
-      name: ['', [Validators.required, Validators.minLength(2)]],
-      owner: ['', [Validators.required, Validators.minLength(2), Validators.maxLength(50)]],
+      name: ['', [Validators.required, Validators.minLength(2), Validators.pattern('^[a-zA-Z ]+$')]],
+      owner: ['', [Validators.required, Validators.minLength(2), Validators.maxLength(50), Validators.pattern('^[a-zA-Z ]+$')]],
       street: ['', [Validators.required]],
-      city: ['', [Validators.required]],
-      zipcode: ['', [Validators.required,  Validators.pattern('^[0-9]{6}$')]],
-      phone: ['', [Validators.required, Validators.pattern('^[0-9]+$')]],
-      email: ['', [Validators.required, Validators.email, Validators.maxLength(100)]],
-      type: ['', Validators.required],
+      city: ['', [Validators.required, Validators.pattern('^[a-zA-Z ]+$')]],
+      zipcode: ['', [Validators.required, Validators.pattern('^[1-9][0-9]{5}$')]],
+      phone: ['', [Validators.required, Validators.pattern('^[789][0-9]{9}$')]],
+      email: ['', [Validators.required, Validators.email]],
+      type: ['', Validators.required]
     });
   }
 
-  handleSubmit() {
-    if (this.restaurantDetails.valid) {
-    if (confirm("Restaurant details about to submit")) {
-      console.log('Restaurant details submitted successfully');
+  handleSubmit() {     
+    if(confirm('Restaurant details about to submit') && this.restaurantDetails.valid){
       this.createRequest(this.restaurantDetails);
       this.restaurantDetails.reset();
-    }
     }
   }
 
@@ -54,20 +47,23 @@ export class DetailsFormComponent {
     this.restaurantAddRequest.email = details.value['email'];
     this.processRequest(this.restaurantAddRequest);
   }
+  isPopupVisible = false;
 
   processRequest(restaurantAddRequestData: RestaurantAddRequest) {
-    this.backend.onboardRestaurant(restaurantAddRequestData). subscribe({
-      next: (response) => {
+    this.backend.onboardRestaurant(restaurantAddRequestData).subscribe({
+      next:(response) =>{
         this.isPopupVisible = true;
-        this.cd.detectChanges();
       },
-      error: (err) => {
-        console.error('Error occurred:', err);
+      error: (error) => {
+        console.log(error);
+        alert('server is running down , please try after some time')
       }
-    });
+    })  
   }
 
-  handleClose(val: boolean): void {
-    this.isPopupVisible = false;
+  handleClose(val: boolean){
+    if(val == true){
+      this.isPopupVisible = false;
+    }
   }
 }

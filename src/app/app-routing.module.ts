@@ -1,34 +1,28 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { DetailsFormComponent } from 'src/app/screen/onboarding/details-form/details-form.component';
-import { HomeComponent } from './Components/home/home.component';
-import { RestaurantAddedPopupComponent } from 'src/app/screen/onboarding/restaurant-added-popup/restaurant-added-popup.component';
-import { AllRestaurantsComponent } from 'src/app/screen/onboarding/all-restro/all-restaurants/all-restaurants/all-restaurants.component';
-
-import { AppComponent } from './app.component';
 
 const routes: Routes = [
-
+  {
+    path: '',
+    redirectTo: '/home',
+    pathMatch: 'full'
+  },
   {
     path: 'onboarding/details-form',
-    component: DetailsFormComponent
+    loadChildren: ()=> import('./screen/onboarding/onboarding.module').then((module)=>module.OnboardingModule)
   },
   {
     path: 'home',
-    component: HomeComponent
-  },
-  {
-    path: 'popup',
-    component: RestaurantAddedPopupComponent
+    loadChildren: ()=> import('./Components/home/home.module').then((module)=>module.HomeModule)
   },
   {
     path: 'all-restaurants',
-    component: AllRestaurantsComponent
+    loadChildren: ()=>import('./screen/all-restros/all-restros.module').then((module)=>module.AllRestrosModule)
   },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
 export class AppRoutingModule { }
